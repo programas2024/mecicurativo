@@ -6,13 +6,12 @@
 }
 
 body {
-    background: #000000;
+    background: #e6d9fc;
     padding: 25px 20px;
     min-height: 100vh;
     display: flex;
     justify-content: center;
 }
-
 
 .contenedor {
     max-width: 1100px;
