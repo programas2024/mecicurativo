@@ -159,41 +159,18 @@ function construirMenuAdaptable() {
     const mobile = isMobile();
     
     categorias.forEach(cat => {
-        if (cat.id === 'galeria') {
-            if (mobile) {
-                // 📱 MÓVIL: SweetAlert con 3 botones
-                html += `
-                    <button class="menu-btn-categoria" onclick="window.mostrarGaleria()"
-                            style="border-left: 5px solid ${cat.color};">
-                        <i class="fas ${cat.icono}" style="color: ${cat.color};"></i>
-                        <span>${cat.nombre}</span>
-                    </button>
-                `;
-            } else {
-                // 💻 PC: SUBMENÚ DESPLEGABLE (como las demás categorías)
-                html += `
-                    <div class="menu-item" data-cat="${cat.id}">
-                        <button class="menu-btn" onclick="toggleSubmenu('${cat.id}')">
-                            <i class="fas ${cat.icono}"></i>
-                            <span>${cat.nombre}</span>
-                        </button>
-                        <div class="submenu ${cat.id}" id="submenu-${cat.id}" style="border-color: ${cat.color}">
-                            <div class="tema-link" onclick="seleccionarTema(999)">
-                                <i class="fas fa-images" style="color: ${cat.color}"></i>
-                                <span>Ver galería completa</span>
-                            </div>
-                            <div class="tema-link" onclick="seleccionarTema(998)">
-                                <i class="fas fa-star" style="color: ${cat.color}"></i>
-                                <span>Destacados</span>
-                            </div>
-                            <div class="tema-link" onclick="seleccionarTema(997)">
-                                <i class="fas fa-clock" style="color: ${cat.color}"></i>
-                                <span>Recientes</span>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            }
+        
+    if (cat.id === 'galeria') {
+    // ✅ TANTO PC COMO MÓVIL: Redirigir a galeria.html
+    html += `
+        <button class="menu-btn-categoria" onclick="window.location.href='galeria.html'"
+                style="border-left: 5px solid ${cat.color};">
+            <i class="fas ${cat.icono}" style="color: ${cat.color};"></i>
+            <span>${cat.nombre}</span>
+        </button>
+    `;
+
+
         } else {
             // Otras categorías (valores, crecimiento, etc.)
             if (mobile) {
