@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (btnAgradecimientos) btnAgradecimientos.addEventListener('click', window.mostrarAgradecimientos);
     
     
+    
 });
 
 // Después de cargar las funciones, agrega:

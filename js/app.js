@@ -286,6 +286,7 @@ window.addEventListener('resize', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+    
     const btnAyuda = document.getElementById('btnAyuda');
     const btnMision = document.getElementById('btnMision');
     const btnSoporte = document.getElementById('btnSoporte');
